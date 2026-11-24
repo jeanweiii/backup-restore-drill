@@ -1,0 +1,12 @@
+B01	PASS	-	ARCHIVE	備份距中斷點 45 分鐘。雜湊、SQLite 結構、100 筆與總額 50,500 皆通過。歸檔演練紀錄。
+B02	FAIL	RPO	FIND_NEWER	距中斷點 300 分鐘，超過 240 分鐘。請備份維運確認較新的復原點。
+B03	FAIL	HASH,SQL	RECOPY,RECHECK_DB	雜湊與資料庫檢核皆失敗。請備份維運取得另一份副本後重新驗證。
+B04	FAIL	COUNT,SUM	RECONCILE	還原後 90 筆、總額 40,950，分別低於 100 筆與 50,500。請資料負責人對照截點清冊。
+B05	FAIL	MISSING	LOCATE_COPY	備份檔不存在，後續檢核無法取得。請備份維運確認交付位置與副本。
+B06	REVIEW	TIME_UNKNOWN	GET_TIMESTAMP	復原點時間缺失，請備份維運補交具時區的時間戳記。
+B07	PASS	-	ARCHIVE	備份距中斷點 240 分鐘，演練時間 30 分鐘，兩者均在允收邊界。歸檔演練紀錄。
+B08	FAIL	RTO	RETIME	演練時間為情境輸入的 31 分鐘，超過 30 分鐘。請服務維運拆解耗時並重演。
+B09	FAIL	RPO	FIND_NEWER	備份距中斷點 241 分鐘，超過 240 分鐘。請備份維運確認較新的復原點。
+B10	REVIEW	JOB_WARN	REVIEW_WARNING	備份工作回報 warning。請備份維運取得警告原文，確認受影響範圍。
+B11	FAIL	SUM	RECONCILE	還原仍為 100 筆，但總額為 50,499。請資料負責人比對各筆金額與截點清冊。
+B12	FAIL	COUNT,SUM,RPO,RTO	RECONCILE,FIND_NEWER,RETIME	90 筆與 40,950 均低於基準，300 分鐘與 31 分鐘也各自超標。請資料、備份與服務負責人分別處理。
