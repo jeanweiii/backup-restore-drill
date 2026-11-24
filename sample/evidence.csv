@@ -1,0 +1,13 @@
+﻿id,job,age,duration,exists,hash,integrity,count,total,issues,decision
+B01,success,45,9,True,True,True,100,50500,[],PASS
+B02,success,300,9,True,True,True,100,50500,['RPO'],FAIL
+B03,success,60,9,True,False,False,,,"['HASH', 'SQL']",FAIL
+B04,success,60,10,True,True,True,90,40950,"['COUNT', 'SUM']",FAIL
+B05,success,60,9,False,,,,,['MISSING'],FAIL
+B06,success,,11,True,True,True,100,50500,['TIME_UNKNOWN'],REVIEW
+B07,success,240,30,True,True,True,100,50500,[],PASS
+B08,success,240,31,True,True,True,100,50500,['RTO'],FAIL
+B09,success,241,30,True,True,True,100,50500,['RPO'],FAIL
+B10,warning,120,13,True,True,True,100,50500,['JOB_WARN'],REVIEW
+B11,success,60,14,True,True,True,100,50499,['SUM'],FAIL
+B12,success,300,31,True,True,True,90,40950,"['COUNT', 'SUM', 'RPO', 'RTO']",FAIL
