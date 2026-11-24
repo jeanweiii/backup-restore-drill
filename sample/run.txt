@@ -1,0 +1,14 @@
+B01 success PASS -
+B02 success FAIL RPO
+B03 success FAIL HASH,SQL
+B04 success FAIL COUNT,SUM
+B05 success FAIL MISSING
+B06 success REVIEW TIME_UNKNOWN
+B07 success PASS -
+B08 success FAIL RTO
+B09 success FAIL RPO
+B10 warning REVIEW JOB_WARN
+B11 success FAIL SUM
+B12 success FAIL COUNT,SUM,RPO,RTO
+12 tickets accepted, 15 evidence codes matched
+Unsafe passes (job success but restore FAIL or REVIEW): 9
